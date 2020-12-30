@@ -8,11 +8,13 @@
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms var(--timing-function);
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -42,20 +44,12 @@
   height: 30px;
   background-color: #ffffff;
   fill: #000000;
-}
-.button-close:hover {
-  border-radius: 50px;
-  outline: none;
-}
-.button-close:focus {
-  border-radius: 50px;
-  outline: none;
-}
-.form {
-  height: 58px;
-  width: 448px;
-  display: flex;
-  flex-direction: column;
+
+  &:hover,
+  &:focus {
+    border-radius: 50px;
+    outline: none;
+  }
 }
 
 .label-icon {
@@ -64,18 +58,31 @@
   display: block;
   position: absolute;
 }
-.form-input {
-  width: 100%;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding-left: 42px;
-  margin-top: 4px;
-  transition: border-color 250ms linear;
-}
-.form-input:focus {
-  outline: none;
-  border: 1px solid var(--accent-color);
+
+.form {
+  height: 58px;
+  width: 448px;
+  display: flex;
+  flex-direction: column;
+
+  &-label {
+    position: relative;
+    margin-top: 10px;
+  }
+  &-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    margin-top: 4px;
+    transition: border-color 250ms linear;
+
+    &:focus {
+      outline: none;
+      border: 1px solid var(--accent-color);
+    }
+  }
 }
 
 .form-input:focus + .label-icon {
@@ -92,11 +99,6 @@
   padding-bottom: 12px;
 }
 
-.form-label {
-  position: relative;
-  margin-top: 10px;
-}
-
 .modal-form-message {
   width: 100%;
   height: 120px;
@@ -107,11 +109,13 @@
   margin-bottom: 20px;
   resize: none;
   transition: border-color 250ms linear;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
 }
-.modal-form-message:focus {
-  outline: none;
-  border-color: var(--accent-color);
-}
+
 .form-policy:checked + .form-policy-text::before {
   background-image: url("../img/icon-check.svg");
   border: none;
