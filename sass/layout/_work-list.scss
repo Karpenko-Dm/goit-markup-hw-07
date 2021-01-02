@@ -19,7 +19,12 @@
   margin-top: 0px;
   padding-top: 50px;
   padding-left: 0px;
+
+  li:not(:last-child) {
+    padding-right: 30px;
+  }
 }
+
 .work-list-title {
   font-weight: bold;
   font-size: 14px;
@@ -43,8 +48,4 @@
 
 .thumb-work-list {
   position: relative;
-}
-
-.work-list li:not(:last-child) {
-  padding-right: 30px;
 }

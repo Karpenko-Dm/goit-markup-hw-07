@@ -26,17 +26,18 @@ footer {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.address-contact a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.6);
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
 
 .address-contact {
   padding-top: 9px;
+
+  a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 .footer-link-icon {
   display: flex;
@@ -51,33 +52,35 @@ footer {
 
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: #ffffff;
+  }
 }
 .footer-icon {
   fill: currentColor;
   width: 20px;
   height: 20px;
 }
-.footer-link-icon:hover,
-.footer-link-icon:focus {
-  background-color: var(--accent-color);
-  color: #ffffff;
-}
 .action {
   display: inline-block;
   padding-bottom: 72px;
   padding-left: 70px;
-}
-.action p {
-  margin: 0;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-align: left;
-  text-transform: uppercase;
 
-  padding-bottom: 20px;
+  p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-align: left;
+    text-transform: uppercase;
+
+    padding-bottom: 20px;
+  }
 }
 .footer-social-list {
   display: flex;
@@ -85,32 +88,33 @@ footer {
   align-items: center;
   margin: 0px;
   padding: 0px;
-}
-.footer-social-list > li:not(:last-child) {
-  margin-right: 10px;
-}
 
+  > li:not(:last-child) {
+    margin-right: 10px;
+  }
+}
 .footer-form-field {
   position: relative;
   min-width: 570px;
   margin-left: 93px;
   justify-content: space-around;
-}
-.footer-form-field form {
-  display: flex;
-  justify-content: space-between;
-}
 
-.footer-form-field p {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-align: left;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin: 0px;
-  padding: 0 0 20px;
+  form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-align: left;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0px;
+    padding: 0 0 20px;
+  }
 }
 .subscribe-button {
   min-width: 200px;

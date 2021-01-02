@@ -1,25 +1,27 @@
 .partner {
   padding-bottom: 90px;
   padding-top: 90px;
-}
-.partner h1 {
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-  text-align: center;
-  padding-bottom: 50px;
-  margin: 0;
+
+  h1 {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    text-align: center;
+    padding-bottom: 50px;
+    margin: 0;
+  }
 }
 .partner-list {
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
-}
-.partner-list > li:not(:last-child) {
-  margin-right: 30px;
+
+  > li:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .partner-link-icon {
@@ -34,16 +36,16 @@
 
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+  }
 }
 
 .partner-icon :nth-child {
   width: 44px;
   height: 49px;
-}
-
-.partner-link-icon:hover,
-.partner-link-icon:focus {
-  fill: var(--accent-color);
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
 }

@@ -49,6 +49,7 @@
   &:focus {
     border-radius: 50px;
     outline: none;
+    background-color: var(--accent-color);
   }
 }
 
@@ -123,18 +124,18 @@
 
 .form-policy-text {
   margin-bottom: 30px;
-}
 
-.form-policy-text::before {
-  background-size: cover;
-  content: "";
-  display: inline-block;
-  background-origin: content-box;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #000000;
-  margin-top: 10px;
-  margin-right: 8px;
+  &::before {
+    background-size: cover;
+    content: "";
+    display: inline-block;
+    background-origin: content-box;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #000000;
+    margin-top: 10px;
+    margin-right: 8px;
+  }
 }
 .visually-hidden {
   position: absolute !important;
